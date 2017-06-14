@@ -1,0 +1,92 @@
+/*
+login frame
+*/
+
+
+.x {
+            position: relative;
+            bottom: 0px;
+            margin: 0px auto;
+        }
+        
+        .inputtext {
+            position: absolute;
+            bottom: 250px;
+        }
+
+.undertable {
+    position:fixed;
+    top:100%;
+    left:50%;
+}
+
+/* Button */
+
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	.button,
+	button {
+		@include vendor('appearance', 'none');
+		@include vendor('transition', 'all 0.2s ease-in-out');
+		background-color: #98c593;
+		border: 0;
+		border-radius: 3.5em;
+		color: #fff;
+		cursor: pointer;
+		display: inline-block;
+		height: 3.5em;
+		line-height: 3.5em;
+		outline: 0;
+		padding: 0 2em 0 2em;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+
+		&.down {
+			width: 5em;
+			height: 5em;
+			line-height: 4.5em;
+			padding: 0;
+			background-image: url('images/dark-arrow.svg');
+			background-position: center center;
+			background-repeat: no-repeat;
+			text-indent: -10em;
+			overflow: hidden;
+
+			&.anchored {
+				bottom: 0;
+				border-bottom: 0;
+				border-radius: 3em 3em 0 0;
+				height: 4.5em;
+				margin-left: -2.5em;
+			}
+		}
+
+		&.anchored {
+			position: absolute;
+			left: 50%;
+		}
+
+		&:hover {
+			background-color: #a8d5a3;
+		}
+
+		&:active {
+			background-color: #88b583;
+		}
+
+		&.style2 {
+			background-color: transparent;
+			border: solid 2px #e5e6e7;
+			color: inherit;
+
+			&:hover {
+				background-color: rgba(145, 146, 147, 0.035);
+			}
+
+			&.down {
+				background-image: url('images/arrow.svg');
+			}
+		}
+	}
